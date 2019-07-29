@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<div align="center">
+    <form *ngIf="ulogin">
+        <h1>USER SIGN IN</h1>
+        <div class="input">
+            <input type="text" name="username" [(ngModel)]="username" placeholder="Username">
+        </div>
+
+        <div class="input">
+            <input type="password" name="password" [(ngModel)]="password" placeholder="Password" > 
+        </div>
+
+        <div class="input">
+            <input type="submit" value="Sign In" (click)="LoginUser()">
+        </div>
+    </form>
+    
+    <form *ngIf="udash">
+            
+        <table>
+            <tr><th style="text-align:center; background-color:cadetblue" colspan="3">Welcome {{uname}}!</th></tr>
+            <tr><td>Address</td>&emsp;<td>777,Vinayaka Nagar,Bengaluru-561010</td><td rowspan="6"><figure><img src="assets/img/b.png" width="500" height="500" alt="Consumption for last month" style="text-align: center"><figcaption style="text-align:center"><b>Consumption of Power in the Month of June</b></figcaption></figure></td></tr>
+            <tr><td>Meter No.</td>&emsp;<td>K667849</td></tr>
+            <tr><td>Units used</td>&emsp;<td>127 kWh</td></tr>
+            <tr><td>Bill Cycle</td>&emsp;<td>04/06/2019-03/07/2019</td></tr>
+            <tr><td>Amount Due</td>&emsp;<td>₹825.5/-</td></tr>
+            <tr><td>Bill Due Date</td>&emsp;<td>04/07/2019</td></tr>
+        </table>
+        <br><br>
+        <!--
+        <div class="container" style="text-align:center">
+            <br><img src="assets/img/a.png" width="500" height="500" alt="Consumption for last month" style="text-align: center">
+        </div><br>
+        -->
+        <div class="logout" align="center">
+            <button routerLink="/" class="signin">LOGOUT</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,21 @@
+<div id="box">
+  <div class="left">
+    <agm-map [latitude]="lat" [longitude]="lng">
+      <agm-marker latitude="16.1725" longitude="75.6557" label="Bagalkot" (markerClick)="showDetails2('Bagalkot')"></agm-marker>
+      <agm-marker latitude="15.39" longitude="74.12" label="Dharwad" (markerClick)="showDetails2('Dharwad')"></agm-marker>
+      <agm-marker latitude="16.21" longitude="77.35" label="Raichur" (markerClick)="showDetails2('Raichur')"></agm-marker>
+      <agm-marker latitude="15.85" longitude="74.55" label="Belgaum" (markerClick)="showDetails2('Belgaum')"></agm-marker>
+      <agm-marker latitude="15.06" longitude="76.55" label="Bellary" (markerClick)="showDetails2('Bellary')"></agm-marker>
+    </agm-map>
+  </div>
+  <div class="right">
+    <form>
+      <table>
+        <tr><th style="text-align:center; background-color:cadetblue" colspan="2">Electricity Consumption Details for {{dname}}</th></tr>
+        <tr><td>Demand</td>&emsp;&emsp;<td>{{ demand }}</td></tr>
+        <tr><td>Supply</td>&emsp;&emsp;<td>{{ supply }}</td></tr>
+        <tr><td>Downtime</td>&emsp;&emsp;<td>{{ downtime }}</td></tr>
+      </table>
+    </form>
+  </div>
+</div>

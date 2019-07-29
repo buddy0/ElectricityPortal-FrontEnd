@@ -1,0 +1,26 @@
+<div align="center">
+    <form *ngIf="alogin"> 
+        <h1>ADMIN SIGN IN</h1>
+        <div class="input">
+            <input type="text" name="Username" [(ngModel)]="username" placeholder="Username" />
+        </div>
+
+        <div class="input">
+            <input type="password" name="password" [(ngModel)]="password" placeholder="Password" />
+        </div>
+
+        <div class="input">
+            <input type="submit" value="Sign In" (click)="LoginAdmin()">
+        </div>
+    </form>
+
+    <form *ngIf="adash">
+            <div>  
+                <figure><img src="assets/img/kpclpp.png" width="500" height="500" alt="KPCL Projects" style="text-align: center"><figcaption style="text-align:center"><b>KPCL Power Projects</b></figcaption></figure>
+            </div>
+        <div class="logout" align="center">
+            <button routerLink="/" class="signin">LOGOUT</button>
+        </div>
+
+    </form>
+</div>
